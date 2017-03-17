@@ -22,3 +22,6 @@ management:
    security:
       roles: SUPERUSER
    context-path: /manager
+
+file:
+   path: Test.xml

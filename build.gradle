@@ -72,3 +72,6 @@ dependencies {
 
 }
 
+processResources {
+    expand project.properties
+}

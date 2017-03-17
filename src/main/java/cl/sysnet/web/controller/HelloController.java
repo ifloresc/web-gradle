@@ -1,5 +1,6 @@
 package cl.sysnet.web.controller;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -20,8 +21,11 @@ public class HelloController {
 	public String index() {
 		log.info("Leemos el archivo");
 		try {
-            resource.getFile();
-            log.info("Found the resource " + resource.getFilename());
+            File file = resource.getFile();
+            log.info("Filename : {}" , resource.getFilename());
+            log.info("exists : {}" , file.exists());
+            
+            log.info("Content : {} ", resource.getInputStream().toString());
         } catch (IOException ex) {
         	log.error(ex.toString());
         }

@@ -24,4 +24,4 @@ management:
    context-path: /manager
 
 file:
-   path: Test.xml
+   path: classpath:xml/Test.xml
